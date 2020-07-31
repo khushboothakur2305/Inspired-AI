@@ -1,5 +1,24 @@
 .form-card {
-  width: 400px;
+  width: 370px;
+}
+.image {
+  width: 750px;
+  height: 650px;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+.signup {
+  position: relative;
+  padding: 10px;
+}
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
 }
 .icon-card {
   width: 40px;
@@ -11,11 +30,11 @@
 }
 .input {
   height: 50px;
-  width: 400px;
-  color: white;
+  width: 350px;
   background-color: #cdf8f1;
   border: #cdf8f1;
   border-radius: 5px;
+  padding-inline-start: 20px;
 }
 .btn {
   background-color: #6ee3d0;
@@ -23,4 +42,27 @@
 }
 .btn:disabled {
   background-color: #d1f8f2;
+}
+.a {
+  text-decoration: none;
+  color: #6ee3d0;
+}
+.a2 {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.heading {
+  font-size: 40px;
+  line-height: 55px;
+  text-align: left;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+.font {
+  padding-top: 30px;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: left;
+  letter-spacing: 1px;
 }
