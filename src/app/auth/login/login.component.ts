@@ -4,17 +4,13 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-  onsignup(form:NgForm){
+  ngOnInit(): void {}
+  onsignup(form: NgForm) {
     console.log(form);
-
   }
-
 }
