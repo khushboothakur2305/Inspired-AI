@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "inspired-ai": {
+      "hosting": {
+        "Inspired-Ai": [
+          "inspired-ai"
+        ]
+      }
+    }
+  }
+}
