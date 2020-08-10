@@ -1,21 +1,28 @@
-<div fxLayout fxLayoutAlign="center" fxLayoutGap="60px" class="signup">
+<div class="container1">
   <div fxLayout>
     <div class="container">
-      <img class="image" src="assets\Images\Signup\signup.jpg" />
-      <section class="centered">
-        <p class="heading">Sign In to create<br />your free chatbot.</p>
-        <p class="font">
-          If you don't have an account <br />you can
-          <a class="a" href="/signup">Register here!</a>
-        </p>
+      <section class="top-left">
+        <section class="oval"></section>
+      </section>
+      <section class="heading">
+        Sign In to create<br />your free chatbot.
+      </section>
+      <br /><br /><br /><br />
+      <section class="font">
+        If you don't have an account <br />you can
+        <a class="a" href="/signup">Register here!</a>
       </section>
     </div>
+    <br />
   </div>
-  <div style="padding-top: 60px;">
-    <section>
-      <section class="form-card">
-        <form fxLayout="column" #form="ngForm" (ngSubmit)="onsignup(form)">
-          <mat-form-field appearance="fill">
+  <div class="bottom-left">
+    <img class="image" src="\assets\Images\Signup\signup.png" />
+  </div>
+  <div class="top-right">
+    <div style="padding-top: 50px;">
+      <section>
+        <section class="form-card">
+          <form fxLayout="column" #form="ngForm" (ngSubmit)="onsignup(form)">
             <input
               class="input"
               type="text"
@@ -24,20 +31,7 @@
               ngModel
               required
               #emailinput="ngModel"
-            />
-
-            <mat-error *ngIf="emailinput.hasError('required')"
-              >Field must not be empty</mat-error
-            >
-            <mat-error *ngIf="!emailinput.hasError('required')"
-              >Email is invalid</mat-error
-            >
-          </mat-form-field>
-
-          <mat-form-field
-            appearance="outline"
-            hintLabel="should be atleast 6 character long"
-          >
+            /><br>
             <input
               class="input"
               type="password"
@@ -47,52 +41,53 @@
               required
               minlength="6"
               #password="ngModel"
-            /> </mat-form-field
-          ><br />
-          <section style="padding-inline-start: 245px; padding-bottom: 20px;">
-            <a class="a" href="/recovery">Recovery Password</a>
-          </section>
-          <button
+            />
+            <br />
+            <section style="padding-inline-start: 245px; padding-bottom: 20px;">
+              <a class="a" href="/recovery" (click)="RecoveryPassword()">Recovery Password</a>
+            </section>
+            <button
             class="btn"
             type="submit"
-            mat-raised-button
             color="primary"
             [disabled]="form.invalid"
           >
-            <a class="a2" href="/login">Sign In</a>
+            <a style="text-decoration: none; color: white;" href="/login"
+              >Sign up</a
+            >
           </button>
-        </form>
-        <section fxLayout="column" fxLayoutAlign="center center">
-          <section style="padding-top: 30px; padding-bottom: 20px;">
-            <p>
-              -----------------------Or continue with-----------------------
-            </p>
-          </section>
-          <section fxLayout fxLayoutGap="20px">
-            <mat-card class="icon-card">
-              <img
-                class="icon"
-                fxLayoutAlign="center"
-                src="assets\Images\Signup\google.png"
-              />
-            </mat-card>
-            <mat-card class="icon-card">
-              <img
-                class="icon"
-                fxLayoutAlign="center"
-                src="assets\Images\Signup\apple.png"
-              />
-            </mat-card>
-            <mat-card class="icon-card">
-              <img
-                class="icon"
-                fxLayoutAlign="center"
-                src="assets\Images\Signup\facebook.png"
-              />
-            </mat-card>
+          </form>
+          <section fxLayout="column" fxLayoutAlign="center center">
+            <section style="padding-top: 30px; padding-bottom: 20px;">
+              <p>
+                -----------------------Or continue with-----------------------
+              </p>
+            </section>
+            <section fxLayout fxLayoutAlign="center center" fxLayoutGap="30px">
+              <section class="icon-card">
+                <img
+                  (click)="googleSignIn()"
+                  fxLayout="column"
+                  fxLayoutAlign="center center"
+                  src="assets\Images\Signup\google.png"
+                />
+              </section>
+              <section class="icon-card">
+                <img
+                  fxLayoutAlign="center"
+                  src="assets\Images\Signup\apple.png"
+                />
+              </section>
+              <section class="icon-card">
+                <img
+                  fxLayoutAlign="center"
+                  src="assets\Images\Signup\facebook.png"
+                />
+              </section>
+            </section>
           </section>
         </section>
       </section>
-    </section>
+    </div>
   </div>
 </div>
