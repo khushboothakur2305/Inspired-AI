@@ -22,13 +22,19 @@ export class LoginComponent implements OnInit {
     this.auth
       .signInWithEmailAndPassword(form.value.email, form.value.password)
       .then((re) => {
-        console.log('success');
+        console.log(re, 'Success');
+        this.snackbar.open('Login Successfully !!', 'Dismiss', {
+          duration: 3000
+        });
+        this.router.navigate(["/login"]);
       })
       .catch((err) => {
         console.log(err.message);
-      });
-    console.log(form);
-  }
+        this.snackbar.open(err.message, 'Dismiss', {
+          duration: 3000
+        });
+  });
+}
   googleSignIn() {
     this.auth
       .signInWithPopup(new auth.GoogleAuthProvider())

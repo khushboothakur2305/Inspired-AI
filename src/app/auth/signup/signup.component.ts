@@ -16,7 +16,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {}
   onsignup(form: NgForm) {
     this.auth
-      .createUserWithEmailAndPassword(form.value.email, '12345678')
+      .createUserWithEmailAndPassword(form.value.email,form.value.password)
       .then((re) => {
         console.log(re, 'Success');
         this.snackbar.open('Registered User Successfully !!', 'Dismiss', {
