@@ -9,7 +9,7 @@
       </section>
       <br /><br /><br /><br />
       <section class="font">
-        If you don't have an account <br />you can
+        If you don't have an account <br />You can
         <a class="a" href="/signup">Register here!</a>
       </section>
     </div>
@@ -31,7 +31,7 @@
               ngModel
               required
               #emailinput="ngModel"
-            /><br>
+            /><br />
             <input
               class="input"
               type="password"
@@ -44,18 +44,20 @@
             />
             <br />
             <section style="padding-inline-start: 245px; padding-bottom: 20px;">
-              <a class="a1" href="/recovery" (click)="RecoveryPassword()">Recovery Password</a>
+              <a class="a1" href="/recovery" (click)="RecoveryPassword()"
+                >Recovery Password</a
+              >
             </section>
             <button
-            class="btn"
-            type="submit"
-            color="primary"
-            [disabled]="form.invalid"
-          >
-            <a style="text-decoration: none; color: white;" href="/login"
-              >Sign up</a
+              class="btn"
+              type="submit"
+              color="primary"
+              [disabled]="form.invalid"
             >
-          </button>
+              <a style="text-decoration: none; color: white;" href="/login"
+                >Sign up</a
+              >
+            </button>
           </form>
           <section fxLayout="column" fxLayoutAlign="center center">
             <section style="padding-top: 30px; padding-bottom: 20px;">
