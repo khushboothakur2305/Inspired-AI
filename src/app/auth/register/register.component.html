@@ -1,0 +1,198 @@
+<div
+  fxLayout
+  fxLayoutAlign="center"
+  fxLayoutGap="350px"
+  style="padding-top: 30px;"
+  class="container"
+>
+  <div>
+    <section class="top-left">
+      <section class="oval"></section>
+    </section>
+    <section class="heading">Sign In to create<br />your free chatbot.</section>
+    <br /><br /><br /><br />
+    <section class="font">
+      If you don't have an account <br />You can
+      <a class="a" href="/login">Register here!</a>
+    </section>
+    <div class="bottom-left">
+      <img class="image" src="\assets\Images\Signup\signup.png" />
+    </div>
+  </div>
+  <div class="top-right" >
+    <div style="padding-top: 50px;">
+
+        <section class="form-card">
+          <form [formGroup]="loginForm"  #form="ngForm" (ngSubmit)="onsignup(form)">
+            <div class="form-group">
+              <input
+                class="form-control"
+                formControlName="fname"
+                type="text"
+                ngModel
+                placeholder="Name"
+              />
+            </div>
+            <div class="error-messages">
+              <ng-container *ngFor="let error of error_messages.fname">
+                <div
+                  class="error-message"
+                  *ngIf="
+                    loginForm.get('fname').hasError(error.type) &&
+                    (loginForm.get('fname').dirty ||
+                      loginForm.get('fname').touched)
+                  "
+                >
+                  {{ error.message }}
+                </div>
+              </ng-container>
+            </div>
+            <br />
+            <div class="form-group">
+              <input
+                class="form-control"
+                formControlName="email"
+                type="text"
+                ngModel
+                placeholder="E-mail"
+              />
+            </div>
+            <div class="error-messages">
+              <ng-container *ngFor="let error of error_messages.email">
+                <div
+                  class="error-message"
+                  *ngIf="
+                    loginForm.get('email').hasError(error.type) &&
+                    (loginForm.get('email').dirty ||
+                      loginForm.get('email').touched)
+                  "
+                >
+                  {{ error.message }}
+                </div>
+              </ng-container>
+            </div>
+            <br />
+            <div class="form-group">
+              <input
+                class="form-control"
+                formControlName="lname"
+                type="number"
+                ngModel
+                placeholder="Phone Number"
+              />
+            </div>
+            <div class="error-messages">
+              <ng-container *ngFor="let error of error_messages.lname">
+                <div
+                  class="error-message"
+                  *ngIf="
+                    loginForm.get('lname').hasError(error.type) &&
+                    (loginForm.get('lname').dirty ||
+                      loginForm.get('lname').touched)
+                  "
+                >
+                  {{ error.message }}
+                </div>
+              </ng-container>
+            </div>
+            <br />
+
+            <div class="form-group">
+              <input
+                class="form-control"
+                formControlName="password"
+                type="password"
+                ngModel
+                placeholder="Password"
+              />
+            </div>
+            <div class="error-messages">
+              <ng-container *ngFor="let error of error_messages.password">
+                <div
+                  class="error-message"
+                  *ngIf="
+                    loginForm.get('password').hasError(error.type) &&
+                    (loginForm.get('password').dirty ||
+                      loginForm.get('password').touched)
+                  "
+                >
+                  {{ error.message }}
+                </div>
+              </ng-container>
+            </div>
+            <br />
+
+            <div class="form-group">
+              <input
+                class="form-control"
+                formControlName="confirmpassword"
+                type="password"
+                ngModel
+                placeholder="Confirm Password"
+              />
+            </div>
+            <div class="error-messages">
+              <ng-container
+                *ngFor="let error of error_messages.confirmpassword"
+              >
+                <div
+                  class="error-message"
+                  *ngIf="
+                    loginForm.get('confirmpassword').hasError(error.type) &&
+                    (loginForm.get('confirmpassword').dirty ||
+                      loginForm.get('confirmpassword').touched)
+                  "
+                >
+                  {{ error.message }}
+                </div>
+              </ng-container>
+            </div>
+            <br /><br />
+            <pre>
+              Form Error - {{ loginForm.errors |json}}
+            </pre>
+
+            <button
+              class="btn"
+              type="submit"
+              color="primary"
+              [disabled]="loginForm.invalid"
+              [disabled]="form.invalid"
+            >
+              <a style="text-decoration: none; color: white;">Sign up</a>
+            </button>
+          </form>
+          <section fxLayout="column" fxLayoutAlign="center center">
+            <section style="padding-top: 30px; padding-bottom: 20px;">
+              <p>
+                -----------------------Or continue with-----------------------
+              </p>
+            </section>
+            <section fxLayout fxLayoutAlign="center center" fxLayoutGap="30px">
+              <section class="icon-card">
+                <img
+                  (click)="googleSignIn()"
+                  fxLayout="column"
+                  fxLayoutAlign="center center"
+                  src="assets\Images\Signup\google.png"
+                />
+              </section>
+              <section class="icon-card">
+                <img
+                  fxLayoutAlign="center"
+                  src="assets\Images\Signup\apple.png"
+                />
+              </section>
+              <section class="icon-card">
+                <img
+                  fxLayoutAlign="center"
+                  src="assets\Images\Signup\facebook.png"
+                />
+              </section>
+            </section>
+          </section>
+        </section>
+
+    </div>
+  </div>
+</div>

@@ -1,11 +1,7 @@
 .form-card {
   width: 370px;
 }
-.container1 {
-  position: relative;
-  text-align: center;
-  color: black;
-}
+
 .container {
   position: relative;
   text-align: center;
@@ -63,7 +59,7 @@
 .top-right {
   position: absolute;
   top: 8px;
-  left: 65%;
+  left: 85%;
 }
 
 .centered {
@@ -106,8 +102,7 @@
     position: relative;
   }
 }
-
-.input {
+input {
   height: 50px;
   width: 350px;
   background-color: #e5fcf8;
@@ -116,6 +111,7 @@
   padding-inline-start: 20px;
 }
 .btn {
+  width: 350px;
   background-color: #82e7d6;
   height: 50px;
   border-radius: 10px;
@@ -157,4 +153,13 @@
 }
 .lady {
   height: 100px;
+}
+p {
+  font-family: Lato;
+}
+.error-message {
+  color: red;
+}
+input.ng-touched.ng-invalid {
+  border: 1px solid red;
 }

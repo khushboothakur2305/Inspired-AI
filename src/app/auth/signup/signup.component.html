@@ -15,11 +15,12 @@
       </section>
     </div>
     <br />
+    <div class="bottom-left">
+      <img class="image" src="\assets\Images\Signup\signup.png" />
+    </div>
   </div>
 
-  <div class="bottom-left">
-    <img class="image" src="\assets\Images\Signup\signup.png" />
-  </div>
+
   <div class="top-right">
     <div style="padding-top: 50px;">
       <section>
@@ -72,7 +73,9 @@
               ngModel
               required
               #passwordinput="ngModel"
-            /><br /><br />
+            />
+            {{messag}}
+            <br /><br />
             <button
               class="btn"
               type="submit"

@@ -11,10 +11,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent implements OnInit {
+  messag:string;
   constructor(private auth: AngularFireAuth,private snackbar : MatSnackBar,private router : Router) {}
 
   ngOnInit(): void {}
   onsignup(form: NgForm) {
+    if(form.value.password=form.value.confirmpswd){
+this.messag="Password Match"
+    }
+    else{
+      this.messag="no maych"
+    }
     this.auth
       .createUserWithEmailAndPassword(form.value.email,form.value.password)
       .then((re) => {

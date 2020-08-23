@@ -1,0 +1,82 @@
+.bottom-panel {
+  background-image: url(/assets/footer.jpg);
+  bottom: 0px;
+  width: 100%;
+  height: fit-content;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.row1,
+.row2,
+.row3 {
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 100%;
+  width: fit-content;
+  float: right;
+}
+
+.btm {
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.rowleft {
+  margin-top: 2%;
+  margin-left: 150px;
+  width: fit-content;
+  float: left;
+}
+
+.det {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#fb,
+#l,
+#g,
+#tw,
+#insta {
+  width: 35px;
+  height: 35px;
+  float: left;
+  margin-right: 30px;
+}
+
+.social {
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+.copyright {
+  text-align: left;
+  font-size: 18px;
+  bottom: 30px;;
+  color: grey;
+  margin-top: 12%;
+}
+
+.logo {
+  margin-left: 150px;
+  margin-top: 5%;
+}
+
+#comp-logo {
+  width: 50px;
+}
+
+span{
+  vertical-align: middle;
+  padding-left: 0.5em;
+}
+
+.comp-name{
+  font-size: 25px;
+}
